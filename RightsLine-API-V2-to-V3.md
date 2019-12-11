@@ -11,9 +11,9 @@ Differences between V2 and V3 include:
 
 If you are currently using V2 of RightsLine's public API and would like to transition to V3, please follow the steps listed below:
 
-1. Modify requests to use [Amazon AWS Authentication](#amazon-aws-authentication).
-2. [Convert date fields](#convert-date-fields) to ISO format.
-3. [Convert List-of-Value (LOV) fields](#convert-list\-of\-value-\(lov\)-fields)  to JSON objects, or an array of JSON objects.
+1. Modify requests to use [Amazon AWS Authentication](#1-amazon-aws-authentication).
+2. [Convert date fields](#2-convert-date-fields) to ISO format.
+3. [Convert List-of-Value (LOV) fields](#3-convert-list\-of\-value-\(lov\)-fields)  to JSON objects, or an array of JSON objects.
 
 
 ## 1. Amazon AWS Authentication
