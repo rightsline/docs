@@ -56,36 +56,8 @@ Your Company API Key will be provided by RightsLine.  It is shared among your or
 
 [top](#rightsline-api-transition-from-v2-to-v3)
 
-## Data Format Changes
+## 2. Convert Date Fields
 
-### Date Fields
-All date fields are now in ISO format.  
-
-### Money Fields
-Money data is now in JSON format. 
-
-    "characteristics": {
-        "balance": {
-            "locAmt": "37500.00",
-            "locCur": 1,
-            "locSym": "USD",
-            "divAmt": "37500.00",
-            "divCur": 1,
-            "divSym": "USD"
-        },
-        "total": {
-            "locAmt": "37500.00",
-            "locCur": 1,
-            "locSym": "USD",
-            "divAmt": "37500.00",
-            "divCur": 1,
-            "divSym": "USD"
-        },
-        "allow_full_recoupment": {
-            "id": 1,
-            "value": "Yes"
-        }
-    }
 [top](#rightsline-api-transition-from-v2-to-v3)
 
 ## 3. Convert List-of-Value (LOV) Fields
