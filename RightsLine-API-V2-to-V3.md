@@ -31,7 +31,7 @@ Request:
 POST /v3/auth/temporary-credentials
 Accept: application/json
 Content-Type: application/json
-x-api-key: {Company API Key}
+x-api-key: {Company_API_Key}
 Body:
 {
  "accessKey":"*************",
@@ -48,7 +48,7 @@ Body:
 {
 "accessKey": "***********",
 "secretKey": "***************************",
-"sessionToken": “FQoDYXd//////====ONCXz6OZC6FIxoWO1CGxVkwnY6WT07ZdLgGkr5ZkRCnGpa5uiF5KKbgMMWyQjKIazeyarBvXleDQmJznO4tBKq3U709cY20lVkdzHwAJQ5HXWHVop6w6cRy8uyOFPZ9fPD79PJ0L9KUkSo9uIG8DUK7PRvs4eAtIQQFdW+j2eHx6sUlF====34098qojfaof",
+"sessionToken": "FQoDYXd//////====ONCXz6OZC6FIxoWO1CGxVkwnY6WT07ZdLgGkr5ZkRCnGpa5uiF5KKbgMMWyQjKIazeyarBvXleDQmJznO4tBKq3U709cY20lVkdzHwAJQ5HXWHVop6w6cRy8uyOFPZ9fPD79PJ0L9KUkSo9uIG8DUK7PRvs4eAtIQQFdW+j2eHx6sUlF====34098qojfaof",
 "expiration": "2018-01-01T00:00:01+00:00"
 }
 ```
