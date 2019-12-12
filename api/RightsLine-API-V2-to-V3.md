@@ -78,7 +78,7 @@ POST /v3/catalog-item
 X-Api-Key: [API_KEY]
 X-Amz-Security-Token: FQoDYXd//////====ONCXz6OZC6FIxoWO1CGxVkwnY6WT07ZdLgGkr5ZkRCnGpa5uiF5KKbgMMWyQjKIazeyarBvXleDQmJznO4tBKq3U709cY20lVkdzHwAJQ5HXWHVop6w6cRy8uyOFPZ9fPD79PJ0L9KUkSo9uIG8DUK7PRvs4eAtIQQFdW+j2eHx6sUlF====34098qojfaof
 X-Amz-Date: 20190124T015900Z
-Authorization: AWS4-HMAC-SHA256 Credential=ASIAQGIY6FPQGYYQBEXU/20191212/us-east-1/execute-api/aws4_request, SignedHeaders=host;x-amz-date;x-amz-security-token;x-api-key, Signature=791afe433715f22df25973ece9c22f23cd53be71f20eda7abf6e745e0a163f17
+Authorization: AWS4-HMAC-SHA256 Credential=*******************/20191212/us-east-1/execute-api/aws4_request, SignedHeaders=host;x-amz-date;x-amz-security-token;x-api-key, Signature=***************************************************
 Body:
 {
     "title": "TEST SEASON 99",
@@ -96,6 +96,8 @@ Body:
 [top](#rightsline-api-transition-from-v2-to-v3)
 
 ## Convert Date Fields
+
+All date fields are now in UTC and represented in Standard ISO-8601 format.  
 
 [top](#rightsline-api-transition-from-v2-to-v3)
 
