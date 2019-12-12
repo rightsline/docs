@@ -1,5 +1,7 @@
 ﻿# RightsLine API Transition from V2 to V3 
 
+*Created: 12/12/2019*
+
 Change is hard... But we think you'll really love what we've done!  
 
 We have released a new version of the RightsLine public API, aptly titled V3.
@@ -16,6 +18,7 @@ If you are currently using V2 of RightsLine's public API and would like to trans
 2. [Convert date fields](#convert-date-fields) to ISO format.
 3. [Convert List-of-Value (LOV) fields](#convert-list-of-value-lov-fields)  to JSON objects, or an array of JSON objects.
 4. [Convert search responses](#convert-search-responses) to new format.
+5. [Convert money data](#convert-money-data-type-to-object) to JSON objects.
 
 ## Amazon AWS Authentication
 
@@ -99,12 +102,81 @@ Body:
 
 All date fields are now in UTC and represented in Standard ISO-8601 format.  
 
+For example, `September 21, 2019 04:53:23 PM` is represented as `20190921T165323Z`.
+
 [top](#rightsline-api-transition-from-v2-to-v3)
 
 ## Convert List-of-Value (LOV) Fields
 
+
+    
 [top](#rightsline-api-transition-from-v2-to-v3)
 
 ## Convert Search Responses
 
+The responses to requests to any search endpoints on the RightsLine API have a new format.  The new search response format is:
+
+``` json
+{
+    "numFound": count_of_entities_found:int,
+    "entities": entities_found:Object[]
+}
+```
+
+An example response for a search request:
+
+``` json
+{
+    "numFound": 2,
+    "entities": [
+        {
+            "id":21224047,
+            "parentURL":"https://api-staging.rightsline.com/v2/catalog-item/123",
+            "childURL":"https://api-staging.rightsline.com/v2/rightset/111",
+            "relationshipType":{
+                "relationshipTypeId":0,
+                "relationshipTypeName":"Default"
+            },
+            "createdById":12345,
+            "createdDate":"2017-09-25T16:00:55.317Z",
+            "lastUpdatedById":12345,
+            "lastUpdatedDate":"2017-09-25T16:00:55.317Z"
+        },
+        {
+            "id":23711944,
+            "parentURL":"https://api-staging.rightsline.com/v2/catalog-item/123",
+            "childURL":"https://api-staging.rightsline.com/v2/rightset/222",
+            "relationshipType":{
+                "relationshipTypeId":0,
+                "relationshipTypeName":"Default"
+            },
+            "createdById":12345,
+            "createdDate":"2018-01-17T17:31:06.753Z",
+            "lastUpdatedById":12345,
+            "lastUpdatedDate":"2018-01-17T17:31:06.753Z"
+        }
+    ]
+}
+```
+
 [top](#rightsline-api-transition-from-v2-to-v3)
+
+## Convert Money Data Type to Object
+
+All `money` data types will be represented as a JSON object in V3.  
+
+An example of a money data type:
+
+``` json
+"amount": {
+    "locAmt": "400.00",
+    "locCur": 1,
+    "locSym": "USD",
+    "divAmt": "400.00",
+    "divCur": 1,
+    "divSym": "USD"
+}
+```
+
+[top](#rightsline-api-transition-from-v2-to-v3)
+
