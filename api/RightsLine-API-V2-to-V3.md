@@ -48,11 +48,11 @@ Use the `API Key`, `Access Key`, and `Secret Access Key` to request your tempora
 POST /v3/auth/temporary-credentials
 Accept: application/json
 Content-Type: application/json
-x-api-key: [API_KEY]
+x-api-key: YOUR_API_KEY
 Body:
 {
- "accessKey":"[ACCESS_KEY]",
- "secretKey":"[SECRET_ACCESS_KEY]"
+ "accessKey":"YOUR_ACCESS_KEY",
+ "secretKey":"YOUR_SECRET_ACCESS_KEY"
 }
 ```
 A successful response:
@@ -82,7 +82,7 @@ A sample request to create a new catalog-item:
 
 ``` json
 POST /v3/catalog-item
-X-Api-Key: [API_KEY]
+X-Api-Key: YOUR_API_KEY
 X-Amz-Security-Token: FQoDYXd//////====ONCXz6OZC6FIxoWO1CGxVkwnY6WT07ZdLgGkr5ZkRCnGpa5uiF5KKbgMMWyQjKIazeyarBvXleDQmJznO4tBKq3U709cY20lVkdzHwAJQ5HXWHVop6w6cRy8uyOFPZ9fPD79PJ0L9KUkSo9uIG8DUK7PRvs4eAtIQQFdW+j2eHx6sUlF====34098qojfaof
 X-Amz-Date: 20190124T015900Z
 Authorization: AWS4-HMAC-SHA256 Credential=*******************/20191212/us-east-1/execute-api/aws4_request, SignedHeaders=host;x-amz-date;x-amz-security-token;x-api-key, Signature=***************************************************
