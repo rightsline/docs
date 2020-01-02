@@ -1,6 +1,6 @@
 ﻿# RightsLine API Transition from V2 to V3 
 
-*Created: 12/12/2019*
+*Date Created: 12/12/2019*
 
 Change is hard... But we think you'll really love what we've done!  
 
@@ -108,13 +108,59 @@ For example, `September 21, 2019 04:53:23 PM` is represented as `20190921T165323
 
 ## Convert List-of-Value (LOV) Fields
 
+Fields/Characteristics whose values are a subset from a possible list of values are now respresented as objects, rather than strings.
 
+Consider a field for a Movie called Genre, which holds the genre of the movie.  A movie can be categorized in several different genres, and has a list of possible values (Comedy, Drama, Documentary, etc.).
+
+In V2, the value of this field would be represented as a pipe-delimited list of strings:
+
+``` json
+"characteristics":{
+    "genre": "Action|Adventure|Comedy|Drama"
+}
+```
+
+In V3, the value of the characteristic is represented either as a single object, or an array of objects:
+
+``` json
+"characteristics":{
+    "genre": [
+      {
+        "id": 2,
+        "value": "Action"
+      },
+      {
+        "id": 3,
+        "value": "Adventure"
+      },
+      {
+        "id": 7,
+        "value": "Comedy"
+      },
+      {
+        "id": 11,
+        "value": "Drama"
+      }
+    ]
+}
+```
+
+The object has the following structure:
+``` json
+{
+    "id": Unique ID of the value:int,
+    "value": The string representation of the value:string
+    "xref":(optional)
+}
+```
+
+When creating/updating an LOV field, it is possible to reference the value either by ID, string value, or xref value.
     
 [top](#rightsline-api-transition-from-v2-to-v3)
 
 ## Convert Search Responses
 
-The responses to requests to any search endpoints on the RightsLine API have a new format.  The new search response format is:
+Responses to requests to any search endpoints on the RightsLine API have a new format.  The new search response format is:
 
 ``` json
 {
