@@ -7,16 +7,20 @@ Change is hard... But we think you'll really love what we've done!
 We have released a new version of the RightsLine public API, aptly titled V3.
 V3 was designed to increase security and flexibility of the API compared to the previous version, V2.  
 
-Differences between V2 and V3 include:
+#### Differences between V2 and V3 include:
 
-{maybe a table of some sort...?  or just summarize changes. }
+- Utilizing Amazon AWS Authentication instead of Basic Authentication to authorize requests.
+- Standard ISO-8601 date formats.
+- List-of-Value fields represented as objects instead of strings.
+- API Search responses contain total count of objects found.
+- Money data types are represented as objects.
 
 If you are currently using V2 of RightsLine's public API and would like to transition to V3, please follow the steps listed below:
 
 #### Steps to transition from RightsLine API V2 to V3
 1. Modify requests to use [Amazon AWS Authentication](#amazon-aws-authentication).
 2. [Convert date fields](#convert-date-fields) to ISO format.
-3. [Convert List-of-Value (LOV) fields](#convert-list-of-value-lov-fields)  to JSON objects, or an array of JSON objects.
+3. [Convert List-of-Value (LOV) fields](#convert-list-of-value-lov-fields) to JSON objects, or an array of JSON objects.
 4. [Convert search responses](#convert-search-responses) to new format.
 5. [Convert money data](#convert-money-data-type-to-object) to JSON objects.
 
