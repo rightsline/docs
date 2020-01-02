@@ -150,12 +150,11 @@ In V3, the value of the characteristic is represented either as a single object,
 ```
 
 The object has the following structure:
-``` json
-{
-    "id": Unique ID of the value:int,
-    "value": The string representation of the value:string
-    "xref":(optional)
-}
+``` yaml
+LOVfield:
+    id: Unique ID of the value:Integer,
+    value: The string representation of the value:String,
+    xref: optional
 ```
 
 When creating/updating an LOV field, it is possible to reference the value either by ID, string value, or xref value.
@@ -166,11 +165,10 @@ When creating/updating an LOV field, it is possible to reference the value eithe
 
 Responses to requests to any search endpoints on the RightsLine API have a new format.  The new search response format is:
 
-``` json
-{
-    "numFound": count_of_entities_found:int,
-    "entities": entities_found:Object[]
-}
+``` yaml
+SearchResponse:
+    numFound: count_of_entities_found:Integer,
+    entities: entities_found:Object[]
 ```
 
 An example response for a search request:
