@@ -36,7 +36,7 @@ Start by generating your API Access Keys:
 2. **Login to your user account** from https://admin.rightsline.com.
 3. Open your **Profile** from the drop-down menu, and in the *API Access* module, click **Generate Access Keys**.
 
-![Test](../images/auth.png)
+![auth](../images/auth.png)
 
 > **Note:** You will use these keys to request temporary access keys to authenticate to the API.  These keys are private.  Please store them securely.
 
@@ -225,6 +225,12 @@ An example of a money data type:
     "divSym": "USD"
 }
 ```
+
+The `locCur`, `locSym`, `divCur`, and `divSym` are the IDs and Values from your configured currency List-of-Values.  If you want the currency conversion tables that have been configured to convert a local currency into your company's currency, you should only supply the locAmt, locCur, and locSym values and the divAmt will be auto calculated based on the effective conversation rate you have configured.
+
+To configure currency conversions, go to **Administration** and click on **Currency** in the *Company Settings* section.
+
+![cur_conv](../images/cur_conv.png)
 
 [top](#rightsline-api-transition-from-v2-to-v3)
 
